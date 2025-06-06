@@ -13,11 +13,11 @@
 
 ### Week 1: 專案初始化與基礎設置
 **Feature Branch**: `feature/project-setup`
-- [ ] **Commit 1: 初始化 Vite + React 專案**
+- [x] **Commit 1: 初始化 Vite + React 專案**
   - 運行 `npm create vite@latest` 創建 React 專案。
   - 配置 `package.json`（添加 `build` 和 `deploy` 腳本）。
   - 設置 `.gitignore`（忽略 `node_modules`, `dist`）。
-- [ ] **Commit 2: 配置 Tailwind CSS**
+- [x] **Commit 2: 配置 Tailwind CSS**
   - 安裝 `tailwindcss`, `postcss`, `autoprefixer`。
   - 配置 `tailwind.config.js`（藍色/綠色主調，例如 `#3b82f6`）。
   - 配置 `postcss.config.js` 和 `index.css`（導入 Tailwind）。
