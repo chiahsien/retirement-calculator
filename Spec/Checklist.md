@@ -46,17 +46,17 @@
 
 **Feature Branch**: `feature/calculation-logic`
 
-- [ ] **Commit 1: 實現按月/年複利計算**
+- [X] **Commit 1: 實現按月/年複利計算**
   - 創建 `src/utils/calculateFV.js`。
   - 實現按月複利：`FV = PV * (1 + r_m)^(n*12) + PMT_m * ((1 + r_m)^(n*12) - 1) / r_m`。
   - 實現按年複利：`FV = PV * (1 + r)^n + PMT * ((1 + r)^n - 1) / r`。
   - 測試函數（例如 PV=$50,000, r=6%, PMT=$1,000/月, n=30）。
-- [ ] **Commit 2: 實現退休後資金消耗計算**
+- [X] **Commit 2: 實現退休後資金消耗計算**
   - 創建 `src/utils/calculateRetirement.js`。
-  - 實現迭代計算：`資產 = 上一年資產 * (1 + 報酬率) - 通膨調整支出`。
+  - 實現迭代計算：`資產 = (上一年資產 - 通膨調整支出) * (1 + 報酬率)`。
   - 輸出可支撐年限和耗盡年紀。
   - 測試函數（例如 FV=$1,264,844, 支出=$40,000/年, 通膨=2%）。
-- [ ] **Commit 3: 實現 localStorage 儲存**
+- [X] **Commit 3: 實現 localStorage 儲存**
   - 創建 `src/utils/storage.js`。
   - 實現 `saveInputs`, `loadInputs`, `resetInputs` 函數。
   - 測試儲存/恢復輸入數據（例如年紀、資產等）。
