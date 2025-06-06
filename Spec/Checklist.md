@@ -1,9 +1,11 @@
 # 退休金計算工具 - 開發計畫檢查清單
 
 ## 概述
+
 本檢查清單規劃退休金計算工具的 MVP 開發，時間為 3-4 週，目標是實現三步驟 UI、複利計算、圖表展示、數據儲存、多語言支援和 GitHub Pages 部署。計畫按功能模組分拆為 Git feature 分支，每個分支包含具體的 Git commit 任務，確保依賴順序合理，無衝突。
 
 ## 總時間表
+
 - **週數**：3-4 週（假設 1-2 名開發者，每週 40 小時）
 - **分支數**：6 個主要 feature 分支
 - **提交數**：約 20-25 個 commits，涵蓋所有功能
@@ -12,34 +14,38 @@
 ## 檢查清單
 
 ### Week 1: 專案初始化與基礎設置
+
 **Feature Branch**: `feature/project-setup`
-- [ ] **Commit 1: 初始化 Vite + React 專案**
+
+- [X] **Commit 1: 初始化 Vite + React 專案**
   - 運行 `npm create vite@latest` 創建 React 專案。
   - 配置 `package.json`（添加 `build` 和 `deploy` 腳本）。
   - 設置 `.gitignore`（忽略 `node_modules`, `dist`）。
-- [ ] **Commit 2: 配置 Tailwind CSS**
+- [X] **Commit 2: 配置 Tailwind CSS**
   - 安裝 `tailwindcss`, `postcss`, `autoprefixer`。
   - 配置 `tailwind.config.js`（藍色/綠色主調，例如 `#3b82f6`）。
   - 配置 `postcss.config.js` 和 `index.css`（導入 Tailwind）。
-- [ ] **Commit 3: 配置 Vite 部署路徑**
+- [X] **Commit 3: 配置 Vite 部署路徑**
   - 修改 `vite.config.js`，設置 `base: '/retirement-calculator/'`。
   - 測試本地開發環境（`npm run dev`）。
-- [ ] **Commit 4: 初始化多語言（react-i18next）**
+- [X] **Commit 4: 初始化多語言（react-i18next）**
   - 安裝 `react-i18next` 和 `i18next`。
   - 配置 `src/i18n/i18n.js`，創建 `zh.json` 和 `en.json`（包含基本標籤，如 "Next"）。
   - 測試語言切換（預設根據 `navigator.language`）。
-- [ ] **Commit 5: 部署初始專案到 GitHub Pages**
+- [X] **Commit 5: 部署初始專案到 GitHub Pages**
   - 安裝 `gh-pages` 套件。
   - 添加部署腳本（`"deploy": "gh-pages -d dist"`）。
   - 運行 `npm run build` 和 `npm run deploy`，驗證 `username.github.io/retirement-calculator`。
 
-**依賴**：無（基礎設置為所有功能的起點）  
+**依賴**：無（基礎設置為所有功能的起點）
 **完成條件**：專案運行正常，Tailwind CSS 生效，語言切換可用，GitHub Pages 部署成功。
 
 ---
 
 ### Week 2: 計算邏輯與儲存
+
 **Feature Branch**: `feature/calculation-logic`
+
 - [ ] **Commit 1: 實現按月/年複利計算**
   - 創建 `src/utils/calculateFV.js`。
   - 實現按月複利：`FV = PV * (1 + r_m)^(n*12) + PMT_m * ((1 + r_m)^(n*12) - 1) / r_m`。
@@ -56,18 +62,21 @@
   - 測試儲存/恢復輸入數據（例如年紀、資產等）。
 
 **Feature Branch**: `feature/input-validation`
+
 - [ ] **Commit 1: 實現輸入驗證邏輯**
   - 創建 `src/utils/validateInputs.js`。
   - 驗證股債比例總和（100%）、退休年紀（> 目前年紀）、無負數/空白。
   - 測試驗證函數（例如無效輸入返回警告訊息）。
 
-**依賴**：專案基礎（Week 1），無其他功能依賴。  
+**依賴**：專案基礎（Week 1），無其他功能依賴。
 **完成條件**：計算邏輯正確（通過單元測試），localStorage 儲存/恢復正常，輸入驗證生效。
 
 ---
 
 ### Week 3: 三步驟 UI 與圖表
+
 **Feature Branch**: `feature/ui-steps`
+
 - [ ] **Commit 1: 實現主應用與步驟狀態管理**
   - 創建 `src/components/App.jsx`。
   - 使用 `useState` 管理三步驟狀態（step=1,2,3）。
@@ -92,6 +101,7 @@
   - 測試語言切換（表單標籤、提示文字更新）。
 
 **Feature Branch**: `feature/charts`
+
 - [ ] **Commit 1: 安裝並配置 Chart.js**
   - 安裝 `chart.js` 和 `react-chartjs-2`。
   - 配置基本線圖（藍色/綠色主調，支援交互）。
@@ -109,14 +119,17 @@
   - 整合 localStorage 自動載入數據。
 
 **依賴**：
+
 - Week 1（專案基礎、Tailwind CSS、react-i18next）。
 - Week 2（計算邏輯、輸入驗證、localStorage）。
-**完成條件**：三步驟 UI 完整，圖表渲染正確，語言切換和數據儲存正常。
+  **完成條件**：三步驟 UI 完整，圖表渲染正確，語言切換和數據儲存正常。
 
 ---
 
 ### Week 4: 優化與部署
+
 **Feature Branch**: `feature/optimization`
+
 - [ ] **Commit 1: 優化打包體積**
   - 配置 PurgeCSS（移除未使用 Tailwind CSS 類）。
   - 使用 Vite 的 tree-shaking 壓縮 JavaScript。
@@ -132,6 +145,7 @@
   - 確保表單和圖表在小螢幕上清晰（例如縮放圖表、優先顯示結果）。
 
 **Feature Branch**: `feature/final-deployment`
+
 - [ ] **Commit 1: 最終部署到 GitHub Pages**
   - 運行 `npm run build` 和 `npm run deploy`。
   - 驗證 `username.github.io/retirement-calculator` 正常運行。
@@ -139,12 +153,13 @@
   - 在 `README.md` 說明專案功能、部署步驟和使用方法。
   - 包含技術棧（React、Tailwind CSS、Chart.js 等）。
 
-**依賴**：Week 1-3（所有功能完成）。  
+**依賴**：Week 1-3（所有功能完成）。
 **完成條件**：應用部署成功，離線運行正常，響應式設計通過測試，體積 < 200KB。
 
 ---
 
 ## Git 分支管理
+
 - **主分支**：`main`（用於最終合併和部署）。
 - **Feature 分支**：
   - `feature/project-setup`
@@ -162,6 +177,7 @@
   - 測試無衝突後合併，確保 `main` 隨時可部署。
 
 ## 風險與緩解
+
 - **風險**：功能依賴未完成（例如 UI 需等待計算邏輯）。
   - **緩解**：按計畫順序開發，先完成計算邏輯（Week 2），再實現 UI（Week 3）。
 - **風險**：Git 分支衝突。
@@ -170,6 +186,7 @@
   - **緩解**：配置 `vite.config.js` 的 `base` 路徑，測試本地和 GitHub Pages。
 
 ## 完成條件
+
 - 所有檢查清單任務完成。
 - 應用在 GitHub Pages 運行正常（`username.github.io/retirement-calculator`）。
 - 三步驟 UI、計算邏輯、圖表、儲存和多語言功能通過測試。
