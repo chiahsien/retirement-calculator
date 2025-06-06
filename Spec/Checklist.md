@@ -32,7 +32,7 @@
   - 安裝 `react-i18next` 和 `i18next`。
   - 配置 `src/i18n/i18n.js`，創建 `zh.json` 和 `en.json`（包含基本標籤，如 "Next"）。
   - 測試語言切換（預設根據 `navigator.language`）。
-- [ ] **Commit 5: 部署初始專案到 GitHub Pages**
+- [X] **Commit 5: 部署初始專案到 GitHub Pages**
   - 安裝 `gh-pages` 套件。
   - 添加部署腳本（`"deploy": "gh-pages -d dist"`）。
   - 運行 `npm run build` 和 `npm run deploy`，驗證 `username.github.io/retirement-calculator`。
