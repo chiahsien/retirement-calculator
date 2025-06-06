@@ -1,0 +1,39 @@
+# Node.js 相關
+node_modules/           # 忽略 npm 安裝的依賴
+package-lock.json       # 忽略 npm 的鎖定文件（使用 yarn 可改為 yarn.lock）
+npm-debug.log           # 忽略 npm 日誌
+yarn-error.log          # 忽略 yarn 日誌
+
+# Vite 建置產物
+dist/                   # 忽略 Vite 打包生成的靜態文件（GitHub Pages 部署時由 gh-pages 管理）
+
+# macOS 系統檔案
+.DS_Store               # 忽略 macOS 的 Finder 隱藏檔案
+.AppleDouble            # 忽略 macOS 資源叉檔案
+.LSOverride             # 忽略 macOS Launch Services 檔案
+
+# VSCode 設定
+.vscode/                # 忽略 VSCode 設定（例如 launch.json, settings.json）
+*.code-workspace        # 忽略 VSCode 工作區文件
+
+# 編譯與臨時檔案
+*.log                   # 忽略日誌文件
+*.cache                 # 忽略快取文件
+*.tmp                   # 忽略臨時文件
+
+# 環境變數
+.env                    # 忽略環境變數文件（若使用，例如 API 密鑰）
+.env.local              # 忽略本地環境變數
+.env.development.local  # 忽略開發環境變數
+.env.production.local   # 忽略生產環境變數
+
+# 測試與覆蓋率報告
+coverage/               # 忽略測試覆蓋率報告（若使用 Jest 或其他測試工具）
+
+# GitHub Pages 部署分支（可選）
+gh-pages/               # 忽略 gh-pages 分支的本地副本（若本地儲存）
+
+# 其他
+*.bak                   # 忽略備份文件
+*.swp                   # 忽略 Vim 交換文件
+*.swo                   # 忽略 Vim 交換文件

@@ -1,0 +1,108 @@
+<svg width="800" height="1800" viewBox="0 0 800 1800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Step 1: 資產累積階段 -->
+  <g transform="translate(0, 0)">
+    <!-- 背景 -->
+    <rect x="0" y="0" width="800" height="600" fill="#f3f4f6"/>
+    <!-- 進度指示器 -->
+    <rect x="20" y="20" width="760" height="40" fill="#e5e7eb" rx="5"/>
+    <circle cx="60" cy="40" r="15" fill="#3b82f6"/>
+    <text x="80" y="45" font-size="14" fill="#000">1. 資產累積</text>
+    <text x="250" y="45" font-size="14" fill="#6b7280">2. 退休提領</text>
+    <text x="420" y="45" font-size="14" fill="#6b7280">3. 計算結果</text>
+    <line x1="100" y1="40" x2="230" y2="40" stroke="#6b7280" stroke-width="2"/>
+    <line x1="270" y1="40" x2="400" y2="40" stroke="#6b7280" stroke-width="2"/>
+    <!-- 語言切換 -->
+    <rect x="700" y="20" width="80" height="30" fill="#e5e7eb" rx="5"/>
+    <text x="710" y="40" font-size="12" fill="#000">中文 ▼</text>
+    <!-- 表單卡片 -->
+    <rect x="50" y="80" width="700" height="400" fill="#ffffff" stroke="#d1d5db" rx="10"/>
+    <text x="70" y="110" font-size="16" fill="#000">目前年紀</text>
+    <rect x="70" y="120" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="380" y="110" font-size="16" fill="#000">總資產 ($)</text>
+    <rect x="380" y="120" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="70" y="170" font-size="16" fill="#000">股票報酬率 (%)</text>
+    <rect x="70" y="180" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="380" y="170" font-size="16" fill="#000">債券報酬率 (%)</text>
+    <rect x="380" y="180" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="70" y="230" font-size="16" fill="#000">股票比例 (%)</text>
+    <rect x="70" y="240" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="380" y="230" font-size="16" fill="#000">債券比例 (%)</text>
+    <rect x="380" y="240" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="70" y="290" font-size="16" fill="#000">定期定額 ($)</text>
+    <rect x="70" y="300" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <rect x="380" y="300" width="150" height="30" fill="#e5e7eb" stroke="#d1d5db"/>
+    <text x="390" y="320" font-size="12" fill="#000">每月</text>
+    <rect x="540" y="300" width="150" height="30" fill="#e5e7eb" stroke="#d1d5db"/>
+    <text x="550" y="320" font-size="12" fill="#000">每年</text>
+    <!-- 按鈕 -->
+    <rect x="600" y="400" width="100" height="40" fill="#3b82f6" rx="5"/>
+    <text x="610" y="425" font-size="14" fill="#fff">下一步</text>
+  </g>
+
+  <!-- Step 2: 退休提領階段 -->
+  <g transform="translate(0, 600)">
+    <!-- 背景 -->
+    <rect x="0" y="0" width="800" height="600" fill="#f3f4f6"/>
+    <!-- 進度指示器 -->
+    <rect x="20" y="20" width="760" height="40" fill="#e5e7eb" rx="5"/>
+    <text x="60" y="45" font-size="14" fill="#6b7280">1. 資產累積</text>
+    <circle cx="230" cy="40" r="15" fill="#3b82f6"/>
+    <text x="250" y="45" font-size="14" fill="#000">2. 退休提領</text>
+    <text x="420" y="45" font-size="14" fill="#6b7280">3. 計算結果</text>
+    <line x1="100" y1="40" x2="210" y2="40" stroke="#6b7280" stroke-width="2"/>
+    <line x1="270" y1="40" x2="400" y2="40" stroke="#6b7280" stroke-width="2"/>
+    <!-- 語言切換 -->
+    <rect x="700" y="20" width="80" height="30" fill="#e5e7eb" rx="5"/>
+    <text x="710" y="40" font-size="12" fill="#000">中文 ▼</text>
+    <!-- 表單卡片 -->
+    <rect x="50" y="80" width="700" height="400" fill="#ffffff" stroke="#d1d5db" rx="10"/>
+    <text x="70" y="110" font-size="16" fill="#000">退休年紀</text>
+    <rect x="70" y="120" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="380" y="110" font-size="16" fill="#000">通膨率 (%)</text>
+    <rect x="380" y="120" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="70" y="170" font-size="16" fill="#000">退休後股票比例 (%)</text>
+    <rect x="70" y="180" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="380" y="170" font-size="16" fill="#000">退休後債券比例 (%)</text>
+    <rect x="380" y="180" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="70" y="230" font-size="16" fill="#000">每年支出 ($)</text>
+    <rect x="70" y="240" width="300" height="30" fill="#f3f4f6" stroke="#d1d5db"/>
+    <!-- 按鈕 -->
+    <rect x="490" y="400" width="100" height="40" fill="#6b7280" rx="5"/>
+    <text x="500" y="425" font-size="14" fill="#fff">上一步</text>
+    <rect x="600" y="400" width="100" height="40" fill="#3b82f6" rx="5"/>
+    <text x="610" y="425" font-size="14" fill="#fff">下一步</text>
+  </g>
+
+  <!-- Step 3: 計算階段 -->
+  <g transform="translate(0, 1200)">
+    <!-- 背景 -->
+    <rect x="0" y="0" width="800" height="600" fill="#f3f4f6"/>
+    <!-- 進度指示器 -->
+    <rect x="20" y="20" width="760" height="40" fill="#e5e7eb" rx="5"/>
+    <text x="60" y="45" font-size="14" fill="#6b7280">1. 資產累積</text>
+    <text x="250" y="45" font-size="14" fill="#6b7280">2. 退休提領</text>
+    <circle cx="400" cy="40" r="15" fill="#3b82f6"/>
+    <text x="420" y="45" font-size="14" fill="#000">3. 計算結果</text>
+    <line x1="100" y1="40" x2="230" y2="40" stroke="#6b7280" stroke-width="2"/>
+    <line x1="270" y1="40" x2="380" y2="40" stroke="#6b7280" stroke-width="2"/>
+    <!-- 語言切換 -->
+    <rect x="700" y="20" width="80" height="30" fill="#e5e7eb" rx="5"/>
+    <text x="710" y="40" font-size="12" fill="#000">中文 ▼</text>
+    <!-- 結果卡片 -->
+    <rect x="50" y="80" width="700" height="150" fill="#ffffff" stroke="#d1d5db" rx="10"/>
+    <text x="70" y="110" font-size="16" fill="#000">退休時總資產: $1,264,844.13</text>
+    <text x="70" y="140" font-size="16" fill="#000">資金可支撐: 30 年</text>
+    <text x="70" y="170" font-size="16" fill="#000">資金耗盡年紀: 95 歲</text>
+    <!-- 圖表區域 -->
+    <rect x="50" y="250" width="700" height="200" fill="#ffffff" stroke="#d1d5db" rx="10"/>
+    <text x="70" y="270" font-size="14" fill="#000">資產增長曲線</text>
+    <path d="M100,400 L200,350 L300,300 L400,250 L500,200 L600,150" stroke="#3b82f6" stroke-width="2" fill="none"/>
+    <text x="70" y="350" font-size="14" fill="#000">資金消耗曲線</text>
+    <path d="M100,420 L200,400 L300,380 L400,360 L500,340 L600,320" stroke="#10b981" stroke-width="2" fill="none"/>
+    <!-- 按鈕 -->
+    <rect x="490" y="500" width="100" height="40" fill="#6b7280" rx="5"/>
+    <text x="500" y="525" font-size="14" fill="#fff">編輯輸入</text>
+    <rect x="600" y="500" width="100" height="40" fill="#ef4444" rx="5"/>
+    <text x="610" y="525" font-size="14" fill="#fff">重置</text>
+  </g>
+</svg>
