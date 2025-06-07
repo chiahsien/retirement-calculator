@@ -63,7 +63,7 @@
 
 **Feature Branch**: `feature/input-validation`
 
-- [ ] **Commit 1: 實現輸入驗證邏輯**
+- [X] **Commit 1: 實現輸入驗證邏輯**
   - 創建 `src/utils/validateInputs.js`。
   - 驗證股債比例總和（100%）、退休年紀（> 目前年紀）、無負數/空白。
   - 測試驗證函數（例如無效輸入返回警告訊息）。
